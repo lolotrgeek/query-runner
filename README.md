@@ -1,0 +1,1 @@
+Created to implement pullback on async api queries. Works well with node-data-finder
