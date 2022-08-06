@@ -6,6 +6,7 @@
  * @param {array} queries 
  * @param {function} func
  * @returns waits for all runners to settle then returns an `array` of results 
+ * @todo could make it faster by removing allSettled and return results as promises are resolved
  */
  function run(queries, func) {
     const timeout = 200
@@ -20,5 +21,5 @@
 }
 
 
-run([1, 2, 3, 4, 5], query => new Promise(resolve => { console.log(query); resolve(query) })).then(console.log)
+// run([1, 2, 3, 4, 5], query => new Promise(resolve => { console.log(query); resolve(query) })).then(console.log)
 module.exports = { run }
